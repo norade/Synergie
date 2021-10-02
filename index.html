@@ -11,18 +11,19 @@
     <title>Synergie - HOME</title>
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="#">
+            <img id="logosynergie" src="images/logo.png" alt="">
         </div>
-        <div class="navbar">
+        <div class="navbar" id="top_navbar">
             <nav>
-                <a href="">Accueil</a>
-                <div class="dropdown1">
-                    <button>Prestations
+                <a class="b_home" href="">Accueil</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Prestations
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown_content">
@@ -33,8 +34,8 @@
                         <a href="">recherche bibliographiques</a>
                     </div>
                 </div>
-                <div class="dropdown2">
-                    <button>Notre Structure
+                <div class="dropdown">
+                    <button class="dropbtn">Notre Structure
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown_content">
@@ -45,22 +46,58 @@
                 </div>
                 <a href="">Demander un devis</a>
                 <a href="">Devenir consultant</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             </nav>
         </div>
     </header>
-
+    <section>
+        <p>oui oui</p>
+    </section>
 
 
 
     <footer>
         <div class="container">
-            <div class="f_1"></div>
-            <div class="f_2"></div>
-            <div class="f_3"></div>
+            <div class="f_1 fcol">
+                <dd>
+                    <img src="" alt="">
+                </dd>
+                <dd>
+                    <a href="">Mentions Legales</a>
+                </dd>
+                <dd>
+                    <a href="">synergie mail</a>
+                </dd>
+            </div>
+
+            <div class="f_2 fcol">
+                <dt>Synergie</dt>
+                <dd>A propos</dd>
+                <dd>Nous contacter</dd>
+                <dd>Nos Prestations</dd>
+                <dd>CPE</dd>
+            </div>
+
+            <div class="f_3f fcol">
+                <dt> Nos réseaux</dt>
+                <dd><a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook"></i> Facebook </a></dd>
+                <dd><a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Instagram </a></dd>
+                <dd><a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a></dd>
+            </div>
 
         </div>
+    
 
     </footer>
-    <script type="text/javascript" src="js/index.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("navbar");
+        if (x.className === "top_navbar") {
+            x.className += " responsive";
+        } else {
+        x.className = "top_navbar";
+         }
+        }
+</script>
 </body>
 </html>
